@@ -15,6 +15,7 @@ import ShareRoute from './ShareRoute';
 import ChatRoute from './ChatRoute';
 import Search from './Search';
 import Root from './Root';
+import CustomLogin from "~/components/Auth/CustomLogin";
 
 const AuthLayout = () => (
   <AuthContextProvider>
@@ -51,11 +52,15 @@ export const router = createBrowserRouter([
     element: <VerifyEmail />,
   },
   {
+    path: 'custom-login',
+    element: <CustomLogin />,
+  },
+  {
     element: <AuthLayout />,
     children: [
       {
         path: '/',
-        element: <LoginLayout />,
+        element: <CustomLogin />,
         children: [
           {
             path: 'login',

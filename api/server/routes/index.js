@@ -1,3 +1,4 @@
+const custom = require('./custom');
 const assistants = require('./assistants');
 const categories = require('./categories');
 const tokenizer = require('./tokenizer');
@@ -54,4 +55,5 @@ module.exports = {
   categories,
   staticRoute,
   banner,
+  custom
 };
