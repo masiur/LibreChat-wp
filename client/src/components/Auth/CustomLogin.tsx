@@ -4,7 +4,7 @@ const CustomLogin: React.FC = () => {
 
     const handleLogin = () => {
         // Perform the redirect
-        const redirectUrl = 'https://authlab.test/?from=authlab_ai';
+        const redirectUrl = 'https://lounge.authlab.io/?from=authlab_ai';
         window.location.href = redirectUrl;
     };
 
