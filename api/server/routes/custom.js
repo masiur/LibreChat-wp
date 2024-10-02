@@ -13,8 +13,9 @@ router.get('/login', async (req, res) => {
   }
 
   try {
+    const jwtToken = process.env.JWT_SECRET;
     // Verify the token from WordPress
-    const decoded = jwt.verify(token, 'YOUR_JWT_SECRET_KEY');
+    const decoded = jwt.verify(token, jwtToken);
 
     // Check if the user exists in your MongoDB by email
     let user = await User.findOne({ email: decoded.email });
