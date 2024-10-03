@@ -135,7 +135,7 @@ const ChatForm = ({ index = 0 }) => {
       onSubmit={methods.handleSubmit((data) => submitMessage(data))}
       className="stretch mx-2 flex flex-row gap-3 last:mb-2 md:mx-4 md:last:mb-6 lg:mx-auto lg:max-w-2xl xl:max-w-3xl"
     >
-      <div className="relative flex h-full flex-1 items-stretch md:flex-col">
+      <div className="relative flex h-full flex-1 items-stretch md:flex-col" id='custom-end-plug'>
         <div className="flex w-full items-center">
           {showPlusPopover && !isAssistantsEndpoint(endpoint) && (
             <Mention

@@ -19,6 +19,8 @@ const EndpointItems: FC<{
             return null;
           } else if (!endpointsConfig?.[endpoint]) {
             return null;
+          } else if (endpoint == 'gptPlugins') {
+            return null;
           }
           const userProvidesKey: boolean | null | undefined = getEndpointField(
             endpointsConfig,
