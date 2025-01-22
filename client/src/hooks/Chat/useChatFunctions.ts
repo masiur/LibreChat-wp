@@ -176,6 +176,7 @@ export default function useChatFunctions({
     const currentMsg: TMessage = {
       text,
       sender: 'User',
+      clientTimestamp: new Date().toLocaleString('sv').replace(' ', 'T'),
       isCreatedByUser: true,
       parentMessageId,
       conversationId,
@@ -219,6 +220,7 @@ export default function useChatFunctions({
       isCreatedByUser: false,
       isEdited: isEditOrContinue,
       iconURL: convo.iconURL,
+      model: convo.model,
       error: false,
     };
 
@@ -253,6 +255,7 @@ export default function useChatFunctions({
       currentMessages = currentMessages.filter((msg) => msg.messageId !== responseMessageId);
     }
 
+    logger.log('message_state', initialResponse);
     const submission: TSubmission = {
       conversation: {
         ...conversation,
