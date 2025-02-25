@@ -106,5 +106,7 @@ uploads/
 
 # owner
 release/
+!/client/src/@types/i18next.d.ts
+
 pnpm-lock.yaml
 package-lock.json
