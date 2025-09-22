@@ -32,7 +32,12 @@ services:
 
 
   vectordb:
+<<<<<<< HEAD
     image: ankane/pgvector:latest
+=======
+    container_name: vectordb
+    image: pgvector/pgvector:0.8.0-pg15-trixie
+>>>>>>> upstream/main
     environment:
       POSTGRES_DB: mydatabase
       POSTGRES_USER: myuser
